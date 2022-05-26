@@ -68,8 +68,8 @@ function listarTotem() {
           },
         }).then(async function (resposta) {
           const totens = await resposta.json();
-          leolindo = totens[i].idTotem;
-          console.log(leolindo);
+          sessionStorage.ID_TOTEM = totens[i].idTotem;
+          window.location = '../pages/action.html'
         });
       }
 

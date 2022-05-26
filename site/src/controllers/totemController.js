@@ -21,7 +21,7 @@ function atualizarTotem(req, res) {
             "\nHouve um erro ao atualizar usuario! Erro: ",
             erro.sqlMessage
           );
-          res.status(10).json(erro.sqlMessage);
+          res.status(500).json(erro.sqlMessage);
         });
     }
 
@@ -35,7 +35,7 @@ function atualizarTotem(req, res) {
         .catch(function (erro) {
           console.log(erro);
           console.log("\nHouve um erro ao pegar os usuarios", erro.sqlMessage);
-          res.status(10).json(erro.sqlMessage);
+          res.status(500).json(erro.sqlMessage);
         });
     }
     

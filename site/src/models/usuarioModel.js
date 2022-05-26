@@ -91,10 +91,11 @@ function updateUsuario(id, nomeUsuario, emailUsuario, telefoneUsuario) {
 
 
 function reiniciarMaquina(
-  reiniciarTotem
+  reiniciarTotem,
+  idTotem
 ) {
   var instrucao = `
-  update totem set reiniciarTotem = ${reiniciarTotem} where idTotem = 52;
+  update totem set reiniciarTotem = ${reiniciarTotem} where idTotem = ${idTotem};
     `;
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);

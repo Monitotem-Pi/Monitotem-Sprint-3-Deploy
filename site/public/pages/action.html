@@ -117,6 +117,7 @@
       },
       body: JSON.stringify({
         reiniciarMaquinaServer: 1,
+        idTotem: sessionStorage.ID_TOTEM
 
 
       })
@@ -140,7 +141,7 @@
   }
   let proximaAtualizacao;
 
-  window.onload = obterDadosGrafico(54);
+  
 
 
 
@@ -366,6 +367,7 @@
     
 
   }
+  window.onload = obterDadosGrafico(sessionStorage.ID_TOTEM);
 </script>
 
 

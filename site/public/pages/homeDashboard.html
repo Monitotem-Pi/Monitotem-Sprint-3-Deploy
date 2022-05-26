@@ -66,13 +66,10 @@
         </div>
 
         <div class="container_content">
-          
+
         </div>
-        <div class="grif" id="alertas" >afnjsnfj</div>
+        <div class="grif" id="alertas">afnjsnfj</div>
       </div>
-
- 
-
     </div>
   </div>
 
@@ -81,36 +78,33 @@
 </html>
 
 <script>
-  nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`  
+  nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`
 
 
-  setInterval(function(){
-    fetch("http://localhost:8080/alertas/listar").then(function(resposta){
+  setInterval(function () {
+    fetch("http://localhost:8080/alertas/listar").then(function (resposta) {
 
-if (resposta.ok == true){
-resposta.json().then(function(json){
-    console.log(json)
-    alertas.innerHTML = ""
-    for (let index = 0; index < json.length; index++) {
-        const element = json[index];
-        if (Number(element.cpu) >= 40 ) {
+      if (resposta.ok == true) {
+        resposta.json().then(function (json) {
+          console.log(json)
+          alertas.innerHTML = ""
+          for (let index = 0; index < json.length; index++) {
+            const element = json[index];
+            if (Number(element.cpu) >= 40) {
 
-            alertas.innerHTML += `
-        <p  style="color: #ff0000;"  > CPU ${element.cpu}% - ${new Date(element.moment).toLocaleDateString("pt-br",{
-            day:"2-digit",month:"2-digit",year:"2-digit",hour:"numeric",minute:"2-digit",second:"numeric"
-        })}</p>
-        `     
-        }
-      
-    }
-})
+              alertas.innerHTML += `
+        <p  style="color: #ff0000;"  > CPU ${element.cpu}% - ${new Date(element.moment).toLocaleDateString("pt-br", {
+                day: "2-digit", month: "2-digit", year: "2-digit", hour: "numeric", minute: "2-digit", second: "numeric"
+              })}</p>
+        `
+            }
 
-}
-})
+          }
+        })
 
- },2000)
+      }
+    })
 
-
-
+  }, 2000)
 
 </script>

@@ -206,9 +206,10 @@ function atualizarUsuario(req, res) {
 function reiniciarMaquina(req, res) {
   var reiniciarTotem = req.body.reiniciarMaquinaServer;
 
+  const idTotem = req.body.idTotem;
 
     usuarioModel
-      .reiniciarMaquina(reiniciarTotem)
+      .reiniciarMaquina(reiniciarTotem, idTotem)
       .then(function (resultado) {
         res.json(resultado);
       })
