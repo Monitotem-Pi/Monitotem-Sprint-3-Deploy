@@ -13,9 +13,10 @@ public class ConnectionFactorySQL {
 
     public DataSource dataSource;
 
-    public ConnectionFactorySQL() {
+    public ConnectionFactorySQL() throws ClassNotFoundException {
 
         ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         comboPooledDataSource.setJdbcUrl("jdbc:sqlserver://svr-monitotem.database.windows.net:1433;"
                 + "database=bd-monitotem;user=admi"
                 + "n-monitotem@svr-monitotem;password={2ads#grupo2};"
