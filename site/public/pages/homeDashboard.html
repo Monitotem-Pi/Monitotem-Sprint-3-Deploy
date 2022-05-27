@@ -22,7 +22,7 @@
   <title>Monitotem</title>
 </head>
 
-<body>
+<body id="pdp">
   <nav id="abrirMenu">
     <div class="container_navbar">
       <div id="menu" class="menu">
@@ -32,7 +32,7 @@
         <i class="fa-solid fa-circle-user"></i> <span id="nomeUsuario"> </span>
       </div>
       <div id="options_menu" class="options_menu">
-        <a onclick="fechar()" class="option activee" href="#"><i class="fa-solid fa-chart-column"></i>
+        <a onclick="fechar()" id="activee" class="option activee" href="#"><i class="fa-solid fa-chart-column"></i>
           <div id="option1" class="option_text">Painel</div>
         </a>
         <a onclick="fechar()" class="option" href="./action.html">
@@ -53,13 +53,22 @@
     </div>
   </nav>
   <div class="container_dashboard">
-    <div class="titulo">
-      <p>Home <span>Visão geral</span></p>
+    <div class="container_top">
+      <div class="titulo_top">
+        <p>Home <span>Visão geral</span></p>
+      </div>
+      <div class="top_10">
+        <div id="btn" class="btn">
+          <div onclick="evento()" id="btnBall" class="btn-ball"><i class="fa-solid fa-lightbulb"></i></div>
+        </div>
+      </div>
     </div>
+
+
     <div class="container_listagem_totens">
-      <div class="box_totens">
+      <div id="box_totens" class="box_totens">
         <div class="box_titulo">Listagem dos totens</div>
-        <div class="status_bar">
+        <div id="status_bar" class="status_bar">
           <p>ID</p>
           <p>Status</p>
           <p>Acão</p>
@@ -68,7 +77,7 @@
         <div class="container_content">
 
         </div>
-        <div class="grif" id="alertas">afnjsnfj</div>
+
       </div>
     </div>
   </div>

@@ -1,3 +1,48 @@
+conter = 0;
+
+function evento() {
+  conter++;
+
+  if (conter == 1) {
+    document.getElementById("btnBall").style.marginLeft = "52px";
+    document.getElementById("btnBall").style.backgroundColor =
+      "rgb(212, 212, 212)";
+    document.getElementById("pdp").style.backgroundColor = "#202529";
+    document.getElementById("pdp").style.color = "#EAEBE6";
+    document.getElementById("btnBall").style.color = "rgb(236, 185, 0)";
+    document.getElementById("btn").style.border = "solid 3px #EAEBE6";
+    document.getElementById("abrirMenu").style.backgroundColor = "#32383D";
+    document.getElementById("activee").style.color = "rgb(40, 40, 40)";
+    document.getElementById('box_totens').style.border = '.5px solid #A1B4C4'
+    document.getElementById('status_bar').style.borderBottom = '.5px solid #A1B4C4'
+    document.getElementById('status_bar').style.borderTop = '.5px solid #A1B4C4'
+    document.getElementById('box_totens').style.backgroundColor = '#32383D'
+
+
+
+
+    
+    conter = -1;
+  } else {
+    document.getElementById("btnBall").style.marginLeft = "52px";
+    document.getElementById("btnBall").style.backgroundColor = "black";
+    document.getElementById("btnBall").style.color = "rgba(255, 247, 0, 0.45)";
+    document.getElementById("btn").style.border = "solid 3px black";
+    document.getElementById("btnBall").style.marginLeft = "2px";
+    document.getElementById("pdp").style.backgroundColor = "white";
+    document.getElementById("pdp").style.color = "black";
+    document.getElementById("abrirMenu").style.backgroundColor = "#2855b5";
+    document.getElementById("activee").style.color = "#2855b5";
+    document.getElementById('box_totens').style.border = '.5px solid #2855b5'
+    document.getElementById('status_bar').style.borderBottom = '.5px solid #2855b5'
+    document.getElementById('status_bar').style.borderTop = '.5px solid #2855b5'
+    document.getElementById('box_totens').style.backgroundColor = 'white'
+
+
+
+  }
+}
+
 var contador = 0;
 
 function abrir() {
@@ -12,7 +57,7 @@ function abrir() {
     document.getElementById("option4").classList.add("active");
     document.getElementById("html").style.overflow = "hidden";
   } else if (contador > 1) {
-    document.getElementById("abrirMenu").style.width = "7%";
+    document.getElementById("abrirMenu").style.width = "6%";
     document.getElementById("menu").style.margin = "0px 0px 50px 0px";
     document.getElementById("user").style.fontSize = "4rem";
     document.getElementById("option1").classList.remove("active");

@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-  width: 100px;
+  width: 7%;
   height: 100vh;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -117,39 +117,60 @@ a {
 .active {
   display: flex;
 }
+
+#activee {
+  display: flex;
+  color: #2855b5;
+  background-color: white;
+}
 /* Sessão home da dashboard --------------------------------------------------------------------------------*/
 
-
-.container_dashboard{
+.container_dashboard {
   width: 100%;
   height: 100vh;
 }
-.titulo{
+.container_top {
   width: 100%;
-  height: 20%;
+  height: 25%;
+  display: flex;
+}
+
+.titulo_top {
+  width: 30%;
+  height: 100%;
   padding: 30px;
 }
 
-.titulo p{
+.titulo_top p {
   font-size: 27px;
   font-weight: bold;
 }
 
-.titulo p span{
+.titulo_top p span {
   font-size: 15px;
   font-weight: normal;
 }
 
-.container_listagem_totens{
+.top_10 {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30px;
+  padding-bottom: 90px;
+}
+
+.container_listagem_totens {
   width: 100%;
-  height: 80%;
+  height: 70%;
   padding-right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.box_totens{
+.box_totens {
   width: 80%;
   height: 100%;
   margin-bottom: 40px;
@@ -163,7 +184,7 @@ a {
   flex-direction: column;
 }
 
-.box_titulo{
+.box_titulo {
   width: 100%;
   height: 10%;
   display: flex;
@@ -173,9 +194,9 @@ a {
   margin-bottom: 10px;
 }
 
-.status_bar{
+.status_bar {
   width: 100%;
-  height: 5%;
+  height: 8%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -185,13 +206,13 @@ a {
   border-bottom: solid 1px #2855b5;
 }
 
-.container_content{
+.container_content {
   width: 100%;
-  height: 85%;
+  height: 75%;
   padding: 20px;
 }
 
-.content{
+.content {
   width: 100%;
   height: 80px;
   margin-bottom: 10px;
@@ -199,16 +220,16 @@ a {
   align-items: center;
   justify-content: space-between;
   padding-left: 76px;
-  padding-right: 80px;
+  padding-right: 60px;
   box-shadow: rgba(0, 0, 0, 0.027) 0px 4px 12px;
   transition: all 0.3s;
 }
 
-.content:hover{
+.content:hover {
   background-color: rgba(0, 0, 0, 0.158);
 }
 
-.content_id{
+.content_id {
   width: 70px;
   height: 50px;
   display: flex;
@@ -217,15 +238,15 @@ a {
   margin-left: -50px;
 }
 
-.content_id i{
+.content_id i {
   font-size: 25px;
 }
 
-.content_status{
+.content_status {
   font-size: 20px;
 }
 
-.content_action{
+.content_action {
   width: 50px;
   height: 50px;
   border-radius: 5px;
@@ -238,16 +259,41 @@ a {
   cursor: pointer;
 }
 
-.content_action:hover{
+.content_action:hover {
   color: white;
   border: solid 25px #286db5;
 }
 
-.grif{
-
- background-color: #2855b5;
+.grif {
+  background-color: #2855b5;
   width: 29%;
   height: 38vh;
   margin: 10px;
   padding: 5px;
+}
+
+.btn {
+  width: 105px;
+  height: 52px;
+  border-radius: 50px;
+  border: rgb(38, 38, 53) solid 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.3s;
+}
+
+.btn-ball {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-left: 2px;
+  color: rgba(255, 247, 0, 0.45);
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.3s;
 }
