@@ -5,13 +5,13 @@ function atualizarTotem(req, res) {
     var sistema = req.body.sistemaServer;
     var fabricante = req.body.fabricanteServer;
     var ipTotem = req.body.ipTotemServer;
-  
+   
     console.log("CONTROLLER: ", id);
     console.log("CONTROLLER: ", sistema);
     console.log("CONTROLLER: ", fabricante);
     console.log("CONTROLLER: ", ipTotem);
       totemModel
-        .atualizarTotem(id, sistema, fabricante, ipTotem)
+        .atualizarTotem(id, sistema, fabricante, ipTotem) 
         .then(function (resultado) {
           res.json(resultado);
         })

@@ -27,7 +27,7 @@
   <div onclick="fecharModal()" id="fundoModal" class="fundoModall">
 
   </div>
-  <div id="container_modal" class="container_modal">
+  <div id="container_modal" class="container_modal"> 
 
     <div id="modal_reiniciar_maquina" class="modal_reiniciar_maquina">
       <div>
@@ -61,7 +61,7 @@
           <i class="slack fa-brands fa-slack"></i>
           <div id="option3" class="option_text">Slack</div>
         </a>
-        <a onclick="fechar()" class="option" href="#action">
+        <a onclick="fechar()" class="option" href="./settingsUser.html">
           <i class="fa-solid fa-gear"></i>
           <div id="option4" class="option_text">Ajustes</div>
         </a>
@@ -108,7 +108,7 @@
         <span id="status_bar"></span>
       </div>
       <div class="grafico_disco">
-        <h1>Disco</h1>
+        <h2>Memória Ram</h2>
         <div class="status_disco">
           <span class="uso_disco">
             <div></div>Uso
@@ -131,6 +131,9 @@
 
 </html>
 <script>
+
+
+
 
   function modalReinicialMaquina() {
     document.getElementById('modal_reiniciar_maquina').style.display = 'flex'

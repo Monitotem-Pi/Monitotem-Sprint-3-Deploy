@@ -83,7 +83,7 @@ function updateUsuario(id, nomeUsuario, emailUsuario, telefoneUsuario) {
         emailUsuario = '${emailUsuario}', 
         telefoneUsuario = '${telefoneUsuario}'
         WHERE id = ${id}
-    `;
+    `; 
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }

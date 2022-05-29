@@ -14,6 +14,8 @@ var medidasRouter = require("./src/routes/medidas");
 var totemRouter = require("./src/routes/totem");
 var alertasRouter = require("./src/routes/alertas");
 var statusRouter = require("./src/routes/status");
+var alterarDados = require("./src/routes/alterarDados");
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -27,6 +29,7 @@ app.use("/medidas", medidasRouter);
 app.use("/totem", totemRouter);
 app.use("/alertas", alertasRouter);
 app.use("/status", statusRouter);
+app.use("/alterarDados", alterarDados);
 
 app.listen(PORTA, function () {
   console.log(`Servidor do site está rodando rodando: http://localhost:${PORTA} \n
