@@ -44,7 +44,7 @@ router.delete("/:id", function (req, res) {
 });
 
 router.put("/:idUsuario", function (req, res) {
-  console.log("CHEGOU AQiiii");
+  console.log("CHEGOU AQiiii"); 
   usuarioController.atualizarUsuario(req, res);
 });
 

@@ -206,7 +206,7 @@ function atualizarUsuario(req, res) {
 function reiniciarMaquina(req, res) {
   var reiniciarTotem = req.body.reiniciarMaquinaServer;
 
-  const idTotem = req.body.idTotem;
+  let idTotem = req.body.idTotem;
 
     usuarioModel
       .reiniciarMaquina(reiniciarTotem, idTotem)
@@ -226,7 +226,10 @@ function reiniciarMaquina(req, res) {
 
 
 function getMemoryTotalRam(req, res) {
-  usuarioModel.getMemoryTotalRam()
+
+  let idTotem = req.body.idTotem;
+
+  usuarioModel.getMemoryTotalRam(idTotem)
       .then(function (resultado) {
           if (resultado.length > 0) {
               res.status(200).json(resultado);
@@ -243,7 +246,10 @@ function getMemoryTotalRam(req, res) {
 }
 
 function getMemoryTotally(req, res) {
-  usuarioModel.getMemoryTotally()
+
+  let idTotem = req.body.idTotem;
+
+  usuarioModel.getMemoryTotally(idTotem)
       .then(function (resultado) {
           if (resultado.length > 0) {
               res.status(200).json(resultado);

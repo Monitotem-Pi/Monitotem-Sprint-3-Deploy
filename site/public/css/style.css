@@ -34,6 +34,7 @@ body {
 
 .div-right img {
   width: 50%;
+  cursor: pointer;
 }
 
 .div-left {

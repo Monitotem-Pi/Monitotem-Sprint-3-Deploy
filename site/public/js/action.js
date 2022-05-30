@@ -61,6 +61,8 @@ function evento() {
     ).style.backgroundColor = "white";
     document.getElementById("modalExcluirUsuario_excluir").style.color =
       "black";
+      document.getElementById("modal_reiniciar_maquina").style.backgroundColor =
+      "white";
   }
 }
 

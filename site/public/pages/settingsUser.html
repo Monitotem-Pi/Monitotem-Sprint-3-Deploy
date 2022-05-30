@@ -96,6 +96,8 @@
 </html>
 <script>
 
+    nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`;
+
     function abrirModal() {
         document.getElementById('container_modal').style.display = 'flex'
         document.getElementById('fundoModal').style.display = 'flex'
@@ -122,13 +124,9 @@
                 document.getElementById('telefoneUser').setAttribute("value", listar[i].telefoneUsuario)
                 document.getElementById('senhaUser').setAttribute("value", listar[i].senhaUsuario)
 
-                
-            }
-        })
-    }
 
-    document.getElementById('modalExcluirUsuario_excluir').onclick = function attDados() {
-                    fetch("/atualizar/42", {
+                document.getElementById('modalExcluirUsuario_excluir').onclick = function attDados() {
+                    fetch("/alterarDados/" + listar[i].id, {
                         method: "PUT",
                         headers: {
                             "Content-Type": "application/json",
@@ -137,13 +135,19 @@
                             nomeServer: nomeUser.value,
                             emailServer: emailUser.value,
                             telefoneServer: telefoneUser.value,
-                            senhaServer: senhaUser.value
+                            senhaServer: senhaUser.value,
+
                         }),
                     }).then((res) => console.log(res));
 
                     document.location.reload(true);
                     window.alert("Alteração realizada com sucesso");
                 };
+
+
+            }
+        })
+    }
     window.addEventListener("load", alterarDados);
 
 

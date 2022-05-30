@@ -27,11 +27,11 @@
   <div onclick="fecharModal()" id="fundoModal" class="fundoModall">
 
   </div>
-  <div id="container_modal" class="container_modal"> 
+  <div id="container_modal" class="container_modal">
 
     <div id="modal_reiniciar_maquina" class="modal_reiniciar_maquina">
       <div>
-        <p>Deseja realmente reinicar o equipamento?</p>
+        <p>Deseja realmente reiniciar o equipamento?</p>
       </div>
       <div class="">
         <button id="modalExcluirUsuario_cancelar" onclick="fecharModal()">Cancelar</button>
@@ -91,14 +91,17 @@
         </div>
         <div class="processos_action">
           <div id="bloco_ok" class="bloco_ok">
+            <p>CPU</p>
             <h1>OK</h1>
             <h2>0-60%</h2>
           </div>
           <div id="bloco_alerta" class="bloco_alerta">
+            <p>CPU</p>
             <h1>Alerta</h1>
             <h2>60-80%</h2>
           </div>
           <div id="bloco_emergencia" class="bloco_emergencia">
+            <p>CPU</p>
             <h1>Emergência</h1>
             <h2>+80%</h2>
           </div>
@@ -117,6 +120,11 @@
             <div></div>Livre
           </span>
         </div>
+        <div class="status_ram">
+          <div class="bolinha"></div>
+          <p>+85 Emergência</p>
+        </div>
+
         <div class="chartDisco"><span id="poercentDisc">0%</span><canvas height="300" id="chartDisco"></canvas></div>
 
         <div class="buttons-action">
@@ -132,7 +140,7 @@
 </html>
 <script>
 
-
+  nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`;
 
 
   function modalReinicialMaquina() {
@@ -331,7 +339,6 @@
 
     // Chart Memory use
 
-
     setInterval(function getMemoryTotalRam() {
       fetch("/usuarios/getMemoryTotalRam").then(function (resposta) {
         console.log("ESTOU NO THEN DO getMemoryTotalRam()!")
@@ -362,7 +369,6 @@
         if (resposta.ok) {
           resposta.json().then(function (resposta) {
             console.log("Dados recebidos do usuario: ", JSON.stringify(resposta));
-
             memoryramTotal = resposta[resposta.indexOf(':') + 1]
             console.log(memoryramTotal.RamTotalbd);
             sessionStorage.MEMORYRAMTOTALLY = memoryramTotal.RamTotalbd;
@@ -379,7 +385,7 @@
 
 
 
-    nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`;
+
 
 
     poercentDisc.innerHTML = `${sessionStorage.MEMORYRAM}%`;

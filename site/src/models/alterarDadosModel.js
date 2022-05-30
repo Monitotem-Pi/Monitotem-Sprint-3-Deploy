@@ -20,7 +20,7 @@ function alterarDados() {
           emailUsuario = '${emailUsuario}', 
           telefoneUsuario = '${telefoneUsuario}',
           senhaUsuario = '${senhaUsuario}'
-          WHERE id = ${id};
+          WHERE id = 42;
       `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
