@@ -48,11 +48,11 @@ router.put("/:idUsuario", function (req, res) {
   usuarioController.atualizarUsuario(req, res);
 });
 
-router.get("/getMemoryTotalRam", function (req,res){
+router.get("/getMemoryTotalRam/:idTotem", function (req,res){
   usuarioController.getMemoryTotalRam(req, res)
 });
 
-router.get("/getMemoryTotally", function (req,res){
+router.get("/getMemoryTotally/:idTotem", function (req,res){
   usuarioController.getMemoryTotally(req, res)
 });
 

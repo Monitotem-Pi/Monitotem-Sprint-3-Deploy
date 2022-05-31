@@ -307,3 +307,20 @@ input[type="radio"] {
 #option-2:checked:checked ~ .option-2 span {
   color: #fff;
 }
+@keyframes spin{
+  to {transform: rotate(360deg);}
+}
+.loader{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: none;
+  border-top: 
+  8px solid rgba(0, 105, 217, 1);
+  border-left: 
+  8px solid rgba(0, 105, 217, 1);
+  border-right: 
+  8px solid rgba(0, 105, 217, 0);
+
+  animation: spin 0.575s infinite linear;
+}

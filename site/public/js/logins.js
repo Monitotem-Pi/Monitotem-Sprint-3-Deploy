@@ -1,4 +1,10 @@
-  function mudar_usuario() {
+function finalizarAguardar() {
+    var divAguardar = document.getElementById("div_aguardar");
+    divAguardar.style.display = "block"
+    document.getElementById("cadastroEmpresa").style.display = 'none'
+
+}
+function mudar_usuario() {
       window.location = "loginUsuario.html"
   }
   function mudar_empresa() {
@@ -18,14 +24,14 @@
     // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
     if (emailVar == "" || senhaVar == "") {
         window.alert("Preencha todos os campos para prosseguir!");
-        finalizarAguardar();
         return false;
     }
 
     if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
         window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-        finalizarAguardar();
         return false;
+    }else{
+        finalizarAguardar()
     }
 
     
@@ -62,7 +68,12 @@
         } else {
 
             console.log("Houve um erro ao tentar realizar o login!");
-
+            window.alert("Email ou senha invalidos! Verifique e tente novamente")
+            var divAguardar = document.getElementById("div_aguardar");
+            divAguardar.style.display = "none"
+            document.getElementById("cadastroEmpresa").style.display = 'block'
+            ipt_email.value = "";
+            ipt_senha.value = "";
             resposta.text().then(texto => {
                 console.error(texto);
               
@@ -90,14 +101,14 @@ function entrarUsuario() {
     // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
     if (emailUsuarioVar == "" || senhaUsuarioVar == "") {
         window.alert("Preencha todos os campos para prosseguir!");
-        finalizarAguardar();
         return false;
     }
     
     if (emailUsuarioVar.indexOf("@") == -1 || emailUsuarioVar.indexOf(".com") == -1) {
         window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-        finalizarAguardar();
         return false;
+    }else{
+        finalizarAguardar()
     }
 
     fetch("/usuarios/autenticarUsuario", {
@@ -132,7 +143,11 @@ function entrarUsuario() {
         } else {
 
             console.log("Houve um erro ao tentar realizar o login!");
-
+            window.alert("Email ou senha invalidos! Verifique e tente novamente")
+            var divAguardar = document.getElementById("div_aguardar");
+            divAguardar.style.display = "none"
+            ipt_email_login_usuario.value = "";
+            ipt_senha_login_usuario.value = "";
             resposta.text().then(texto => {
                 console.error(texto);
               

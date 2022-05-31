@@ -100,10 +100,11 @@
                 <i class="fa-solid fa-lock"></i>
                 <input id="ipt_senha" class="ipt_senha" type="password" placeholder="Senha" />
             </div>
-            <button onclick="entrarEmpresa()" class="btn-login">Login</button>
+            <button id="bntEmpresa" onclick="entrarEmpresa()" class="btn-login">Login</button>
 
-            <p>Não tem conta? Cadastre sua <span class="spn-cadastrar" onclick="Modal.open()"><u>empresa aqui</u></span>
+            <p id="cadastroEmpresa">Não tem conta? Cadastre sua <span class="spn-cadastrar" onclick="Modal.open()"><u>empresa aqui</u></span>
             </p>
+            <div class="loader" id="div_aguardar"></div>
         </div>
     </div>
 </body>

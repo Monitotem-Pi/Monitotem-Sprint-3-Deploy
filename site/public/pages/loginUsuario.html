@@ -57,8 +57,9 @@
             <input id = "ipt_senha_login_usuario" class="ipt_senha_usuario" type="password" placeholder="Senha" />
         </div>
         
-        <button onclick="entrarUsuario()" class="btn-login">Login</button>
-
+        <button id="btnLogin" onclick="entrarUsuario()" class="btn-login">Login</button>
+        <div class="loader" id="div_aguardar"></div>
+        <span id="cadastroEmpresa"></span>
     </div>
 </div>
 <script src="../js/logins.js"></script>

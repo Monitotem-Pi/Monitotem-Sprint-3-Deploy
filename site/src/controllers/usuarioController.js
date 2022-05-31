@@ -227,7 +227,7 @@ function reiniciarMaquina(req, res) {
 
 function getMemoryTotalRam(req, res) {
 
-  let idTotem = req.body.idTotem;
+  let idTotem = req.params.idTotem;
 
   usuarioModel.getMemoryTotalRam(idTotem)
       .then(function (resultado) {
@@ -247,7 +247,7 @@ function getMemoryTotalRam(req, res) {
 
 function getMemoryTotally(req, res) {
 
-  let idTotem = req.body.idTotem;
+  let idTotem = req.params.idTotem;
 
   usuarioModel.getMemoryTotally(idTotem)
       .then(function (resultado) {

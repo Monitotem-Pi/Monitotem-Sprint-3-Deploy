@@ -102,19 +102,19 @@ function reiniciarMaquina(
 }
 
 
-function getMemoryTotalRam() {
+function getMemoryTotalRam(idTotem) {
   console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function getMemoryTotalRam()");
   var instrucao = `
-  select top 1 usoMemoria as RamEmUsobd from [dbo].[registro] where fk_totem = 54 order by dataRegistro desc; `
+  select top 1 usoMemoria as RamEmUsobd from [dbo].[registro] where fk_totem = ${idTotem} order by dataRegistro desc; `
   ;
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);
 }
 
-function getMemoryTotally() {
+function getMemoryTotally(idTotem) {
   console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function getMemoryTotally()");
   var instrucao = `
-  select top 1 memoriaTotal as RamTotalbd from [dbo].[registro] where fk_totem = 54 order by dataRegistro desc; `
+  select top 1 memoriaTotal as RamTotalbd from [dbo].[registro] where fk_totem = ${idTotem} order by dataRegistro desc; `
   ;
   console.log("Executando a instrução SQL: \n" + instrucao);
   return database.executar(instrucao);

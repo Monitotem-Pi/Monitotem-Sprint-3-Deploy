@@ -20,6 +20,7 @@
   <link rel="shortcut icon" href="./assets/totemCerto-2.png" type="image/x-icon">
 
   <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=f6673035-df8e-43d4-b558-483b6b419fad"> </script>
   <title>Monitotem - Dashboard</title>
 </head>
 
@@ -234,7 +235,7 @@
           label: '',
           borderColor: '#32B9CD',
           backgroundColor: '#32b9cd8f',
-          fill: true,
+          fill: true, 
           data: []
         }
       ]
@@ -340,7 +341,7 @@
     // Chart Memory use
 
     setInterval(function getMemoryTotalRam() {
-      fetch("/usuarios/getMemoryTotalRam").then(function (resposta) {
+      fetch("/usuarios/getMemoryTotalRam/"+ sessionStorage.ID_TOTEM).then(function (resposta) {
         console.log("ESTOU NO THEN DO getMemoryTotalRam()!")
         if (resposta.ok) {
           resposta.json().then(function (resposta) {
@@ -364,7 +365,7 @@
 
 
     setInterval(function getMemoryTotally() {
-      fetch("/usuarios/getMemoryTotally").then(function (resposta) {
+      fetch("/usuarios/getMemoryTotally/" + sessionStorage.ID_TOTEM).then(function (resposta) {
         console.log("ESTOU NO THEN DO getMemoryTotally()!")
         if (resposta.ok) {
           resposta.json().then(function (resposta) {
