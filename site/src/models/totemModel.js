@@ -18,7 +18,7 @@ function atualizarTotem(idTotem, sistema, fabricante, ipTotem) {
 
   function deletarTotem(idTotem) {
     var instrucao = `
-          DELETE FROM totem WHERE idTotem = ${idTotem};
+          DELETE FROM totem WHERE idTotem = 66;
       `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

@@ -135,7 +135,7 @@ function listarTotem() {
       };
 
       modalExcluirUsuario_excluir.onclick = function Delete() {
-        fetch("/totem/" + totens[i].idTotem, {
+        fetch("/totem/" + 66, {
           method: "DELETE",
         }).then((res) => console.log(res));
 
